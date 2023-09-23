@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021026B42ABEC1140017990B /* ProfileModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021026B32ABEC1140017990B /* ProfileModuleViewController.swift */; };
 		02B541862ABDE3CA009929B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B541852ABDE3CA009929B8 /* AppDelegate.swift */; };
 		02B5418F2ABDE3CB009929B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02B5418E2ABDE3CB009929B8 /* Assets.xcassets */; };
 		02B541922ABDE3CB009929B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B541902ABDE3CB009929B8 /* LaunchScreen.storyboard */; };
@@ -28,9 +29,7 @@
 		02F606AC2ABE83810080A26E /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606A82ABE83810080A26E /* CustomTransition.swift */; };
 		02F606AD2ABE83810080A26E /* DismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606A92ABE83810080A26E /* DismissTransition.swift */; };
 		02F606AE2ABE83810080A26E /* CrossDissolveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606AA2ABE83810080A26E /* CrossDissolveTransition.swift */; };
-		02F606B22ABE839A0080A26E /* PrototypeStartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606B02ABE839A0080A26E /* PrototypeStartupViewController.swift */; };
 		02F606B32ABE839A0080A26E /* PrototypeModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606B12ABE839A0080A26E /* PrototypeModuleViewController.swift */; };
-		02F606B82ABE83B90080A26E /* PrototypeStartupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606B42ABE83B90080A26E /* PrototypeStartupCoordinator.swift */; };
 		02F606B92ABE83B90080A26E /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606B52ABE83B90080A26E /* ApplicationCoordinator.swift */; };
 		02F606BA2ABE83B90080A26E /* PrototypeTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606B62ABE83B90080A26E /* PrototypeTabCoordinator.swift */; };
 		02F606BB2ABE83B90080A26E /* PrototypeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606B72ABE83B90080A26E /* PrototypeCoordinator.swift */; };
@@ -39,8 +38,6 @@
 		02F606C42ABE83E10080A26E /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606C02ABE83E10080A26E /* TabBarManager.swift */; };
 		02F606C52ABE83E10080A26E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606C12ABE83E10080A26E /* Tab.swift */; };
 		02F606C62ABE83E10080A26E /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606C22ABE83E10080A26E /* TabBarCoordinator.swift */; };
-		02F606CA2ABE84190080A26E /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606C82ABE84190080A26E /* String+.swift */; };
-		02F606CB2ABE84190080A26E /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606C92ABE84190080A26E /* UIColor+.swift */; };
 		02F606D02ABE84340080A26E /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606CC2ABE84340080A26E /* ModuleFactory.swift */; };
 		02F606D12ABE84340080A26E /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606CD2ABE84340080A26E /* CoordinatorFactory.swift */; };
 		02F606D22ABE84340080A26E /* TransitionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F606CE2ABE84340080A26E /* TransitionFactory.swift */; };
@@ -48,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021026B32ABEC1140017990B /* ProfileModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleViewController.swift; sourceTree = "<group>"; };
 		02B541822ABDE3CA009929B8 /* AutomaticCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomaticCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B541852ABDE3CA009929B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02B5418E2ABDE3CB009929B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,9 +69,7 @@
 		02F606A82ABE83810080A26E /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		02F606A92ABE83810080A26E /* DismissTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissTransition.swift; sourceTree = "<group>"; };
 		02F606AA2ABE83810080A26E /* CrossDissolveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveTransition.swift; sourceTree = "<group>"; };
-		02F606B02ABE839A0080A26E /* PrototypeStartupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypeStartupViewController.swift; sourceTree = "<group>"; };
 		02F606B12ABE839A0080A26E /* PrototypeModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypeModuleViewController.swift; sourceTree = "<group>"; };
-		02F606B42ABE83B90080A26E /* PrototypeStartupCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypeStartupCoordinator.swift; sourceTree = "<group>"; };
 		02F606B52ABE83B90080A26E /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		02F606B62ABE83B90080A26E /* PrototypeTabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypeTabCoordinator.swift; sourceTree = "<group>"; };
 		02F606B72ABE83B90080A26E /* PrototypeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypeCoordinator.swift; sourceTree = "<group>"; };
@@ -82,8 +78,6 @@
 		02F606C02ABE83E10080A26E /* TabBarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
 		02F606C12ABE83E10080A26E /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		02F606C22ABE83E10080A26E /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
-		02F606C82ABE84190080A26E /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
-		02F606C92ABE84190080A26E /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		02F606CC2ABE84340080A26E /* ModuleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
 		02F606CD2ABE84340080A26E /* CoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		02F606CE2ABE84340080A26E /* TransitionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionFactory.swift; sourceTree = "<group>"; };
@@ -101,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021026B22ABEC0F40017990B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				021026B32ABEC1140017990B /* ProfileModuleViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		02B541792ABDE3CA009929B8 = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +126,6 @@
 				02B541992ABDE88C009929B8 /* Protocols */,
 				02B541B12ABDEED7009929B8 /* Core */,
 				02B541AA2ABDED7C009929B8 /* Common */,
-				02F606A52ABE834B0080A26E /* Example */,
 				02F606D42ABE8E630080A26E /* AppStore */,
 				02F606A32ABE82060080A26E /* Supporting Files */,
 			);
@@ -142,25 +143,6 @@
 				02F6068B2ABE81A30080A26E /* Transition.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		02B5419C2ABDE91A009929B8 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				02F606BE2ABE83D30080A26E /* TabBar */,
-				02B5419D2ABDE929009929B8 /* Navigation */,
-				02F606B52ABE83B90080A26E /* ApplicationCoordinator.swift */,
-				02F606B72ABE83B90080A26E /* PrototypeCoordinator.swift */,
-				02F606B42ABE83B90080A26E /* PrototypeStartupCoordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		02B5419D2ABDE929009929B8 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Navigation;
 			sourceTree = "<group>";
 		};
 		02B541A02ABDEA49009929B8 /* App */ = {
@@ -214,17 +196,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		02F606A52ABE834B0080A26E /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				02F606C72ABE840C0080A26E /* Common */,
-				02F606A62ABE836D0080A26E /* UserTransition */,
-				02F606AF2ABE838C0080A26E /* Modules */,
-				02B5419C2ABDE91A009929B8 /* Coordinators */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
 		02F606A62ABE836D0080A26E /* UserTransition */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,31 +210,17 @@
 		02F606AF2ABE838C0080A26E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				021026B22ABEC0F40017990B /* Profile */,
 				02F606B12ABE839A0080A26E /* PrototypeModuleViewController.swift */,
-				02F606B02ABE839A0080A26E /* PrototypeStartupViewController.swift */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		02F606BE2ABE83D30080A26E /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		02F606C72ABE840C0080A26E /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				02F606C82ABE84190080A26E /* String+.swift */,
-				02F606C92ABE84190080A26E /* UIColor+.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		02F606D42ABE8E630080A26E /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
+				02F606A62ABE836D0080A26E /* UserTransition */,
+				02F606AF2ABE838C0080A26E /* Modules */,
 				02B541A12ABDEBE9009929B8 /* Factories */,
 				02F606D52ABE8F550080A26E /* Coordinators */,
 			);
@@ -273,6 +230,8 @@
 		02F606D52ABE8F550080A26E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				02F606B52ABE83B90080A26E /* ApplicationCoordinator.swift */,
+				02F606B72ABE83B90080A26E /* PrototypeCoordinator.swift */,
 				02F606B62ABE83B90080A26E /* PrototypeTabCoordinator.swift */,
 				02F606D72ABE93DD0080A26E /* Navigation */,
 				02F606D62ABE8F600080A26E /* TabBar */,
@@ -369,7 +328,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F606B82ABE83B90080A26E /* PrototypeStartupCoordinator.swift in Sources */,
 				02F606D32ABE84340080A26E /* TabFactory.swift in Sources */,
 				02F606A12ABE81EC0080A26E /* UINavigationController+.swift in Sources */,
 				02F606C62ABE83E10080A26E /* TabBarCoordinator.swift in Sources */,
@@ -377,7 +335,7 @@
 				02F606C42ABE83E10080A26E /* TabBarManager.swift in Sources */,
 				02F606922ABE81A30080A26E /* Routable.swift in Sources */,
 				02F606BD2ABE83CC0080A26E /* SystemNavigationController.swift in Sources */,
-				02F606CA2ABE84190080A26E /* String+.swift in Sources */,
+				021026B42ABEC1140017990B /* ProfileModuleViewController.swift in Sources */,
 				02F606972ABE81C80080A26E /* DefaultLifeCycleListener.swift in Sources */,
 				02F606D22ABE84340080A26E /* TransitionFactory.swift in Sources */,
 				02F606D12ABE84340080A26E /* CoordinatorFactory.swift in Sources */,
@@ -397,11 +355,9 @@
 				02F606AB2ABE83810080A26E /* FadeTransition.swift in Sources */,
 				02F606912ABE81A30080A26E /* Transition.swift in Sources */,
 				02F606BB2ABE83B90080A26E /* PrototypeCoordinator.swift in Sources */,
-				02F606CB2ABE84190080A26E /* UIColor+.swift in Sources */,
 				02F606992ABE81C80080A26E /* BaseCoordinator.swift in Sources */,
 				02F6068F2ABE81A30080A26E /* LifeCycleListener.swift in Sources */,
 				02F606AD2ABE83810080A26E /* DismissTransition.swift in Sources */,
-				02F606B22ABE839A0080A26E /* PrototypeStartupViewController.swift in Sources */,
 				02F606902ABE81A30080A26E /* Presentable.swift in Sources */,
 				02F606A02ABE81EC0080A26E /* ModalTransitionStyle.swift in Sources */,
 				02F6068E2ABE81A30080A26E /* SystemNavigation.swift in Sources */,

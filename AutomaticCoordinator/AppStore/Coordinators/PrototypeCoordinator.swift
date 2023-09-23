@@ -48,7 +48,6 @@ private extension PrototypeCoordinator {
 				wSelf?.router.dismissModule()
 			}
 		)
-
 		router.pushModule(module)
 	}
 
@@ -74,27 +73,21 @@ private extension PrototypeCoordinator {
 				wSelf?.openUnitModal()
 			}
 		)
-
 		router.pushModule(module)
 	}
 
-	func presentModule() {
-		weak var wSelf = self
-		let module = moduleFactory.makeSingleModalModule(
-			modalModuleHandler: {
-				wSelf?.presentModule()
-			},
-			closeModalHandler: {
-				wSelf?.router.closeModule()
-			}
-		)
-
-		if #available(iOS 13.0, *) {
-			router.presentModule(module, presentationStyle: .automatic)
-		} else {
-			router.presentModule(module, presentationStyle: .fullScreen)
-		}
-	}
+    func presentModule() {
+        weak var wSelf = self
+        let module = moduleFactory.makeSingleModalModule(
+            modalModuleHandler: {
+                wSelf?.presentModule()
+            },
+            closeModalHandler: {
+                wSelf?.router.closeModule()
+            }
+        )
+        router.presentModule(module, presentationStyle: .automatic)
+    }
 
 	func showUnit() {
 		let coordinator = coordinatorFactory.makePrototypeCoordinator(router: router, parent: self)

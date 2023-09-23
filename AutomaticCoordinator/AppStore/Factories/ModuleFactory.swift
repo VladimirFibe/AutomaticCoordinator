@@ -2,10 +2,6 @@ final class ModuleFactory: ModuleFactoryProtocol {
 	static let shared = ModuleFactory()
 	private init() {}
 
-	func makePrototypeStartupModule(output: PrototypeStartupModuleOutput, deeplink: PrototypeStartupCoordinator.Deeplink) -> Presentable {
-		return PrototypeStartupViewController(output: output, deeplink: deeplink)
-	}
-
 	func makeTabModule(
 		pushUnitHandler: @escaping () -> Void,
 		pushModuleHandler: @escaping () -> Void,
@@ -87,7 +83,6 @@ final class ModuleFactory: ModuleFactoryProtocol {
 }
 
 protocol ModuleFactoryProtocol: AnyObject {
-	func makePrototypeStartupModule(output: PrototypeStartupModuleOutput, deeplink: PrototypeStartupCoordinator.Deeplink) -> Presentable
 	func makeTabModule(
 		pushUnitHandler: @escaping () -> Void,
 		pushModuleHandler: @escaping () -> Void,

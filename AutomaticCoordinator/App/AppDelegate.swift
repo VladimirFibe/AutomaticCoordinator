@@ -27,11 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 func setupAppearance() {
-    UITabBar.appearance().barTintColor = .customMint
+    UITabBar.appearance().barTintColor = .black
     UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.clear], for: .normal)
     UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.clear], for: .normal)
 
-    UINavigationBar.appearance().barTintColor = .customMint
-    UINavigationBar.appearance().tintColor = .white
-    UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.white]
+    UINavigationBar.appearance().barTintColor = .white
+    UINavigationBar.appearance().tintColor = .black
+    UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.black]
 }

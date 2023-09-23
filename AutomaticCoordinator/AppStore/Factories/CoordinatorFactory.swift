@@ -1,9 +1,5 @@
 protocol CoordinatorFactoryProtocol: AnyObject {
 	func makeApplicationCoordinator(router: Routable) -> AnyCoordinator<Void>
-	func makePrototypeStartupCoordinator(
-		output: PrototypeStartupCoordinatorOutput & BaseCoordinator,
-		router: Routable
-	) -> AnyCoordinator<PrototypeStartupCoordinator.Deeplink>
 
 	func makeTabBarCoordinator(router: Routable, parent: BaseCoordinator) -> AnyCoordinator<TabBarCoordinator.Deeplink>
 
@@ -21,21 +17,6 @@ final class CoordinatorFactory: CoordinatorFactoryProtocol {
 
 	func makeApplicationCoordinator(router: Routable) -> AnyCoordinator<Void> {
 		return AnyCoordinator(ApplicationCoordinator(router: router, coordinatorFactory: self))
-	}
-
-	func makePrototypeStartupCoordinator(
-		output: PrototypeStartupCoordinatorOutput & BaseCoordinator,
-		router: Routable
-	) -> AnyCoordinator<PrototypeStartupCoordinator.Deeplink> {
-		return AnyCoordinator(
-			PrototypeStartupCoordinator(
-				output: output,
-				router: router,
-				parent: output,
-				moduleFactory: ModuleFactory.shared,
-				transitionFactory: TransitionFactory.shared
-			)
-		)
 	}
 
 	func makeTabBarCoordinator(router: Routable, parent: BaseCoordinator) -> AnyCoordinator<TabBarCoordinator.Deeplink> {
