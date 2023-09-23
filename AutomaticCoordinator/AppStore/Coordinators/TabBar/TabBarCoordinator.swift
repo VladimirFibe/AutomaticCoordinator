@@ -57,7 +57,7 @@ private extension TabBarCoordinator {
     }
 
     func makeProfile() -> Presentable {
-        let unit = coordinatorFactory.makePrototypeTabCoordinator(parent: self, tab: .profile)
+        let unit = coordinatorFactory.makeProfileTabCoordinator(parent: self, tab: .profile)
         unit.coordinator.start(with: .initial)
         return unit.view
     }

@@ -21,6 +21,25 @@ final class ModuleFactory: ModuleFactoryProtocol {
 		)
 	}
 
+    func makeProfileTabModuel(
+        pushUnitHandler: @escaping () -> Void,
+        pushModuleHandler: @escaping () -> Void,
+        modalModuleHandler: @escaping () -> Void,
+        modalUnitHandler: @escaping () -> Void
+    ) -> Presentable {
+        return ProfileModuleViewController(
+            model: .init(
+                pushUnitHandler: pushUnitHandler,
+                pushModuleHandler: pushModuleHandler,
+                closeUnitOrModuleHandler: nil,
+                popToRootHandler: nil,
+                modalModuleHandler: modalModuleHandler,
+                modalUnitHandler: modalUnitHandler,
+                closeModalHandler: nil
+            )
+        )
+    }
+
 	func makePushModule(
 		pushUnitHandler: @escaping () -> Void,
 		pushModuleHandler: @escaping () -> Void,
@@ -63,6 +82,28 @@ final class ModuleFactory: ModuleFactoryProtocol {
 			)
 		)
 	}
+
+    func makeProfileModule(
+        pushUnitHandler: @escaping () -> Void,
+        pushModuleHandler: @escaping () -> Void,
+        closeUnitOrModuleHandler: @escaping () -> Void,
+        popToRootHandler: @escaping () -> Void,
+        modalModuleHandler: @escaping () -> Void,
+        modalUnitHandler: @escaping () -> Void,
+        closeModalHandler: @escaping () -> Void
+    ) -> Presentable {
+        return ProfileModuleViewController(
+            model: .init(
+                pushUnitHandler: pushUnitHandler,
+                pushModuleHandler: pushModuleHandler,
+                closeUnitOrModuleHandler: closeUnitOrModuleHandler,
+                popToRootHandler: popToRootHandler,
+                modalModuleHandler: modalModuleHandler,
+                modalUnitHandler: modalUnitHandler,
+                closeModalHandler: closeModalHandler
+            )
+        )
+    }
 
 	func makeSingleModalModule(
 		modalModuleHandler: @escaping () -> Void,
@@ -113,4 +154,21 @@ protocol ModuleFactoryProtocol: AnyObject {
 		modalModuleHandler: @escaping () -> Void,
 		closeModalHandler: @escaping () -> Void
 	) -> Presentable
+
+    func makeProfileTabModuel(
+        pushUnitHandler: @escaping () -> Void,
+        pushModuleHandler: @escaping () -> Void,
+        modalModuleHandler: @escaping () -> Void,
+        modalUnitHandler: @escaping () -> Void
+    ) -> Presentable
+
+    func makeProfileModule(
+        pushUnitHandler: @escaping () -> Void,
+        pushModuleHandler: @escaping () -> Void,
+        closeUnitOrModuleHandler: @escaping () -> Void,
+        popToRootHandler: @escaping () -> Void,
+        modalModuleHandler: @escaping () -> Void,
+        modalUnitHandler: @escaping () -> Void,
+        closeModalHandler: @escaping () -> Void
+    ) -> Presentable
 }

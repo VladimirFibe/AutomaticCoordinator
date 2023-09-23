@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		021026B42ABEC1140017990B /* ProfileModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021026B32ABEC1140017990B /* ProfileModuleViewController.swift */; };
+		021026B62ABEC7C80017990B /* ProfileTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021026B52ABEC7C80017990B /* ProfileTabCoordinator.swift */; };
+		021026B82ABED3130017990B /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021026B72ABED3130017990B /* ProfileCoordinator.swift */; };
 		02B541862ABDE3CA009929B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B541852ABDE3CA009929B8 /* AppDelegate.swift */; };
 		02B5418F2ABDE3CB009929B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02B5418E2ABDE3CB009929B8 /* Assets.xcassets */; };
 		02B541922ABDE3CB009929B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B541902ABDE3CB009929B8 /* LaunchScreen.storyboard */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		021026B32ABEC1140017990B /* ProfileModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleViewController.swift; sourceTree = "<group>"; };
+		021026B52ABEC7C80017990B /* ProfileTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabCoordinator.swift; sourceTree = "<group>"; };
+		021026B72ABED3130017990B /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		02B541822ABDE3CA009929B8 /* AutomaticCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomaticCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B541852ABDE3CA009929B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02B5418E2ABDE3CB009929B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -210,8 +214,8 @@
 		02F606AF2ABE838C0080A26E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				021026B22ABEC0F40017990B /* Profile */,
 				02F606B12ABE839A0080A26E /* PrototypeModuleViewController.swift */,
+				021026B22ABEC0F40017990B /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -232,7 +236,9 @@
 			children = (
 				02F606B52ABE83B90080A26E /* ApplicationCoordinator.swift */,
 				02F606B72ABE83B90080A26E /* PrototypeCoordinator.swift */,
+				021026B72ABED3130017990B /* ProfileCoordinator.swift */,
 				02F606B62ABE83B90080A26E /* PrototypeTabCoordinator.swift */,
+				021026B52ABEC7C80017990B /* ProfileTabCoordinator.swift */,
 				02F606D72ABE93DD0080A26E /* Navigation */,
 				02F606D62ABE8F600080A26E /* TabBar */,
 			);
@@ -328,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021026B62ABEC7C80017990B /* ProfileTabCoordinator.swift in Sources */,
 				02F606D32ABE84340080A26E /* TabFactory.swift in Sources */,
 				02F606A12ABE81EC0080A26E /* UINavigationController+.swift in Sources */,
 				02F606C62ABE83E10080A26E /* TabBarCoordinator.swift in Sources */,
@@ -335,6 +342,7 @@
 				02F606C42ABE83E10080A26E /* TabBarManager.swift in Sources */,
 				02F606922ABE81A30080A26E /* Routable.swift in Sources */,
 				02F606BD2ABE83CC0080A26E /* SystemNavigationController.swift in Sources */,
+				021026B82ABED3130017990B /* ProfileCoordinator.swift in Sources */,
 				021026B42ABEC1140017990B /* ProfileModuleViewController.swift in Sources */,
 				02F606972ABE81C80080A26E /* DefaultLifeCycleListener.swift in Sources */,
 				02F606D22ABE84340080A26E /* TransitionFactory.swift in Sources */,

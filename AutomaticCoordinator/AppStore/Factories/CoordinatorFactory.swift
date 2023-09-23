@@ -5,12 +5,16 @@ protocol CoordinatorFactoryProtocol: AnyObject {
 
 	func makePrototypeTabCoordinator(parent: BaseCoordinator, tab: Tab)
 	-> (view: Presentable, coordinator: AnyCoordinator<PrototypeTabCoordinator.Deeplink>)
-
+    func makeProfileTabCoordinator(parent: BaseCoordinator, tab: Tab) -> (view: Presentable, coordinator: AnyCoordinator<ProfileTabCoordinator.Deeplink>)
 	func makePrototypeCoordinator(router: Routable, parent: BaseCoordinator) -> AnyCoordinator<Void>
+    func makeProfileCoordinator(router: Routable, parent: BaseCoordinator) -> AnyCoordinator<Void>
 	func makeModalPrototypeCoordinator(parent: BaseCoordinator) -> (view: Presentable, coordinator: AnyCoordinator<Void>)
+
 }
 
 final class CoordinatorFactory: CoordinatorFactoryProtocol {
+
+
 	static let shared = CoordinatorFactory()
 	let tabFactory = TabFactory()
 	private init() {}
@@ -49,6 +53,22 @@ final class CoordinatorFactory: CoordinatorFactoryProtocol {
 		return (navigation, coordinator)
 	}
 
+    func makeProfileTabCoordinator(parent: BaseCoordinator, tab: Tab)
+    -> (view: Presentable, coordinator: AnyCoordinator<ProfileTabCoordinator.Deeplink>) {
+        let navigation = SystemNavigationController(hideNavigationBar: false)
+        navigation.tabBarItem = tabFactory.makeBarItem(for: tab)
+        let router = ApplicationRouter(rootController: navigation)
+        let coordinator = AnyCoordinator(
+            ProfileTabCoordinator(
+                router: router,
+                parent: parent,
+                coordinatorFactory: self,
+                moduleFactory: ModuleFactory.shared
+            )
+        )
+        return (navigation, coordinator)
+    }
+
 	func makePrototypeCoordinator(router: Routable, parent: BaseCoordinator) -> AnyCoordinator<Void> {
 		return AnyCoordinator(
 			PrototypeCoordinator(
@@ -59,6 +79,17 @@ final class CoordinatorFactory: CoordinatorFactoryProtocol {
 			)
 		)
 	}
+
+    func makeProfileCoordinator(router: Routable, parent: BaseCoordinator) -> AnyCoordinator<Void> {
+        return AnyCoordinator(
+            ProfileCoordinator(
+                router: router,
+                parent: parent,
+                coordinatorFactory: self,
+                moduleFactory: ModuleFactory.shared
+            )
+        )
+    }
 
 	func makeModalPrototypeCoordinator(parent: BaseCoordinator) -> (view: Presentable, coordinator: AnyCoordinator<Void>) {
 		let navigation = SystemNavigationController(hideNavigationBar: false)
